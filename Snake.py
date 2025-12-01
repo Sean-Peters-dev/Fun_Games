@@ -118,10 +118,6 @@ def check_collision(snake):
 
     return False
 
-
-# -----------------------------
-# NEW FUNCTION: RESTART GAME
-# -----------------------------
 def restart_game():
     global snake, food, direction, score
 
@@ -140,9 +136,6 @@ def restart_game():
     next_turn(snake, food)
 
 
-# -----------------------------
-# UPDATED DEATH FUNCTION
-# -----------------------------
 def death():
     canvas.delete(ALL)
     canvas.create_text(
@@ -166,9 +159,6 @@ def death():
     )
 
 
-# -----------------------------
-# WINDOW SETUP
-# -----------------------------
 window = Tk()
 window.title('squirmy')
 window.resizable(False, False)
@@ -206,3 +196,4 @@ food = Food()
 next_turn(snake, food)
 
 window.mainloop()
+
